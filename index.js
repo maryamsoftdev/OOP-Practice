@@ -73,42 +73,84 @@
 //         document.querySelector('div').appendChild(div);
 //         document.querySelector('p').appendChild(para);
 //     })
-const items=[
-{item:"milk", cost:"50",id:1},
-{item:"coffee", cost:"30",id:2},
-{item:"sugar", cost:"70",id:3},
-{item:"water", cost:"20",id:4},
+// start of cart code
+// const items=[
+// {item:"milk", cost:"50",id:1},
+// {item:"coffee", cost:"30",id:2},
+// {item:"sugar", cost:"70",id:3},
+// {item:"water", cost:"20",id:4},
 
 
-];
-const cart={};
-items.forEach(function(ele){
-    // console.log(div)
-    let div = document.createElement('div')
-    div.innerHTML=`<h3>${ele.item}</h3>${" "}$${ele.cost}`;
-    div.style.border='1px solid black';
-    div.style.display='inline-block';
-    div.style.width='100px';
-    div.style.margin='25px';
-    div.style.padding='25px';
-    div.style.alignContent='center';
-    div.style.alignItems='center';
-    div.style.textAlign='center';
-    div.addEventListener('click',function(){
-    let namer = ele.item.toLocaleUpperCase();
-    console.log(namer);
-    if(!cart[namer]){
-    cart[namer]={
-        name:ele.item,
-        price:ele.cost,
-        qty:1,
-        subtotal:function(){
-            return this.price*this.qty
-        }
-    }}else{
-        cart[namer].qty++;
-    }
-    })
-document.querySelector('div').appendChild(div);
+// ];
+// const cart={};
+// const output = document.createElement('div');
+// document.body.appendChild(output);
 
-})
+// items.forEach(function(ele){
+//     // console.log(div)
+//     let div = document.createElement('div')
+//     div.innerHTML=`<h3>${ele.item}</h3>${" "}$${ele.cost}`;
+//     div.style.border='1px solid black';
+//     div.style.display='inline-block';
+//     div.style.width='100px';
+//     div.style.margin='25px';
+//     div.style.padding='25px';
+//     div.style.alignContent='center';
+//     div.style.alignItems='center';
+//     div.style.textAlign='center';
+//     div.addEventListener('click',function(){
+//     let namer = ele.item.toLocaleUpperCase();
+//     console.log(namer);
+//     if(!cart[namer]){
+//     cart[namer]={
+//         name:ele.item,
+//         price:ele.cost,
+//         qty:1,
+//         subtotal:function(){
+//             return this.price*this.qty
+//         }
+//     }}else{
+//         cart[namer].qty++;
+//     }
+//     relist();
+//     })
+//     function relist(){
+//    output.innerHTML="";
+//    console.log(cart);
+//    let total =0;
+//    for(let product in cart){
+//        console.log(cart[product]);
+//        let subtotal= cart[product].subtotal();
+//        total += subtotal; 
+//        output.innerHTML +=`${cart[product].name} $${cart[product].price}X`;
+//        output.innerHTML +=`${cart[product].qty} $${subtotal}X <br>`;
+
+//    }
+//    output.innerHTML +=`Total = $${total}`;
+
+//     }
+// document.querySelector('div').appendChild(div);
+
+// })
+// using onject as classes
+//constaructor function
+//we can use fumction to construct a object
+//in classes we use function keyword and start ever later witgh uppercase(camel case)
+// function BluePrint() {
+//     this.stuff = "yes";
+//     this.greet = "hello";
+// }
+// const myObj1 = new BluePrint();
+// const myObj2 = new BluePrint();
+//example 2
+// function Person(firstName, lastName) {
+//     this.first = firstName;
+//     this.last = lastName
+//     this.greeting = function () {
+//     console.log(`Hello ${this.first} ${this.last}`)
+//     };
+//     }
+//     const tester = new Person('Laurence', 'Svekis');
+//     console.log(tester.first);
+//     tester.greeting();
+
