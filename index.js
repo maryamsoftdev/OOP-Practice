@@ -56,7 +56,18 @@ myObj.places.forEach(function(item){
         // })
         //adding html and retrieving data from object and displaying them in html
         let div = document.createElement('div')
-        div.innerHTML=`<h3>${item.location}`;
+        let para = document.createElement('p')
+        div.innerHTML=`<h3>${item.location}</h3>${" "}${item.long}`;
+        para.innerHTML=`<h3>${item.lat}</h3>${" "}${item.long}`;
+
+        //adding styles(css) through js
+        div.style.border='1px solid red';
+        div.style.display='inline-block';
+        div.style.width='100px'
+        div.style.height='100px'
         console.log(div);
+        console.log(para);
+
         document.querySelector('div').appendChild(div);
+        document.querySelector('p').appendChild(para);
     })
